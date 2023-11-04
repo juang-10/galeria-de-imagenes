@@ -1,0 +1,38 @@
+# Ignorar todos los archivos de texto
+*.txt
+
+# Pero incluir archivo de texto importante
+!README.txt
+
+# Ignorar una carpeta completa
+node_modules/
+
+# Ignorar archivos de configuración local
+*.local
+
+# Ignorar archivos de registro excepto el registro maestro
+*.log
+!master.log
+
+# Ignorar archivos temporales que pueden ser creados por el editor
+*~
+
+# Ignorar el archivo de configuración de un sistema o editor en particular
+.idea/
+.vscode/
+
+# Ignorar archivos de construcción
+build/
+dist/
+
+# Ignorar archivos de clave privada
+*.pem
+
+# Ignorar los archivos de paquete
+/public/bundle.js
+/public/bundle.css
+/public/bundle.css.map
+
+# O si todos los archivos de paquete están en un directorio específico:
+/dist/
+/build/
