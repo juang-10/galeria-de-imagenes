@@ -8,9 +8,11 @@ contenedorCategorias.addEventListener('click', (e) => {
   if(e.target.closest('a')) {
     galeria.classList.add('galeria--active');
     document.body.style.overflow = 'hidden';
-    const categoriaActiva = e.target.dataset.categoria;
+    const categoriaActiva = e.target.closest('a').dataset.categoria;
     // Enlazar las fotos de datFotos con la categoriaActiva
     const fotos = dataFotos.fotos[categoriaActiva];
+    // Limpiar internamente el carrusel de galeriaSlides
+    galeriaSlides.innerHTML = ''
     // Mostrar fotos del slide de las categorias
     fotos.forEach((foto) => {
       const slide = `
